@@ -1,3 +1,4 @@
+package _01_houses;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class FortuneCookie implements ActionListener {
-
+          
 	public static void main(String[] args) {
 		new FortuneCookie().showButton();
 		// TODO Auto-generated method stub
