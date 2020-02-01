@@ -1,4 +1,4 @@
-import ddf.minim.*;  
+0import ddf.minim.*;  
 PImage pictureOfRecord; 
 Minim minim;  
 AudioPlayer song;  
