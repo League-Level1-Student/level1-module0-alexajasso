@@ -1,19 +1,13 @@
-//import ddf.minim.*;
-//Minim minim;
-//AudioSample sound;
 int x=20;
 int y=50;
 int ballW = 20;
 int ballH = 20;
-int speed=10;
+int speed=5;
 int speed2=5;
 void setup() {
   size(500, 500);
   background(80, 247, 218);
-  //minim = new Minim (this);
-  //sound = minim.loadSample("pong2.wav", 128);
 }
-
 
 
 void draw() {
@@ -33,6 +27,22 @@ void draw() {
   }
   if (y < 0) {
     speed2= 5;
-    //sound.trigger();
+   
   }
+  rect(mouseX, height-20, 100, 10);
+  
+  if (intersects(x,y,mouseX,height-20, 100 )){
+  speed2= -5;
+  
+  }
+  
+}
+  
+  
+
+boolean intersects(int ballX, int ballY, int paddleX, int paddleY, int paddleLength) {
+     if (ballY > paddleY && ballX > paddleX && ballX < paddleX + paddleLength)
+          return true;
+     else
+          return false;
 }
